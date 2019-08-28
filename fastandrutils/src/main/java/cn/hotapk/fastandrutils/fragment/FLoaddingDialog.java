@@ -50,7 +50,7 @@ public class FLoaddingDialog extends FBaseDialogFragment {
 
     @Override
     public void initView(View view) {
-        textView = view.findViewById(R.id.loadding_tv);
+        textView = (TextView) view.findViewById(R.id.loadding_tv);
         if (getArguments() != null) {
             textView.setText(getArguments().getString(LOADDINGTITLE, "加载中。。。"));
         }

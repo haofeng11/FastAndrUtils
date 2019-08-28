@@ -86,9 +86,9 @@ public class FShareDialog extends FBaseDialogFragment {
 
     @Override
     public void initView(View view) {
-        shareTitle = view.findViewById(R.id.share_title);
-        shareLv = view.findViewById(R.id.share_lv);
-        shareCancel = view.findViewById(R.id.share_cancel);
+        shareTitle = (TextView) view.findViewById(R.id.share_title);
+        shareLv = (RecyclerView) view.findViewById(R.id.share_lv);
+        shareCancel = (TextView) view.findViewById(R.id.share_cancel);
         shareTitle.setText(TextUtils.isEmpty(topTitle) ? "分享" : topTitle);
         shareLv.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         sharesAdapter = new FSimpleRvAdapter<ShareBean>(getContext(), shareBeans, R.layout.share_item) {

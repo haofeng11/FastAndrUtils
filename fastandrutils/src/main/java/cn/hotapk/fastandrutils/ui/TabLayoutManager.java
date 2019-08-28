@@ -362,10 +362,10 @@ public class TabLayoutManager {
         View view = null;
         view = tabLayout.getTabAt(position).getCustomView();
         if (imgResid != -1) {
-            tabIcon = view.findViewById(imgResid);
+            tabIcon = (ImageView) view.findViewById(imgResid);
         }
         if (textResid != -1) {
-            tabText = view.findViewById(textResid);
+            tabText = (TextView) view.findViewById(textResid);
         }
         if (!sel) {
             if (tabIcon != null) {
@@ -417,11 +417,11 @@ public class TabLayoutManager {
     private View getTabView(Context context, int position) {
         View view = LayoutInflater.from(context).inflate(layoutRes, null);
         if (imgResid != -1) {
-            ImageView tabIcon = view.findViewById(imgResid);
+            ImageView tabIcon = (ImageView) view.findViewById(imgResid);
             tabIcon.setImageResource(resNors.get(position));
         }
         if (textResid != -1) {
-            TextView tabText = view.findViewById(textResid);
+            TextView tabText = (TextView) view.findViewById(textResid);
             tabText.setText(titles.get(position));
         }
         return view;

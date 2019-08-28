@@ -70,7 +70,7 @@ public class FStatusBarUtils {
      */
     public static void setSysStatusBarfit(Activity activity, @ColorInt int statusBarColor) {
         if (allowtranslucent(activity, statusBarColor)) {
-            ViewGroup parent = activity.findViewById(android.R.id.content);
+            ViewGroup parent = (ViewGroup) activity.findViewById(android.R.id.content);
             View view = parent.getChildAt(0);
             if (!view.getFitsSystemWindows()) {
                 view.setFitsSystemWindows(true);
@@ -314,7 +314,7 @@ public class FStatusBarUtils {
      * @param alpha
      */
     private static void addStatusBarColor(final Activity activity, final int color, @FloatRange(from = 0.0, to = 1.0) float alpha) {
-        ViewGroup parent = activity.findViewById(android.R.id.content);
+        ViewGroup parent = (ViewGroup) activity.findViewById(android.R.id.content);
         View fakeStatusBarView = parent.findViewWithTag(activity.getClass().getSimpleName());
         if (fakeStatusBarView != null) {
             if (fakeStatusBarView.getVisibility() == View.GONE) {
@@ -335,7 +335,7 @@ public class FStatusBarUtils {
      * @param alpha
      */
     private static void addStatusBar4Draw(final Activity activity, final int color, @FloatRange(from = 0.0, to = 1.0) float alpha) {
-        ViewGroup parent = activity.findViewById(android.R.id.content);
+        ViewGroup parent = (ViewGroup) activity.findViewById(android.R.id.content);
         View fakeStatusBarView = parent.findViewWithTag(activity.getClass().getSimpleName());
         if (fakeStatusBarView != null) {
             if (fakeStatusBarView.getVisibility() == View.GONE) {

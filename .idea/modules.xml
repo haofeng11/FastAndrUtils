@@ -4,7 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FastAndrUtils.iml" filepath="$PROJECT_DIR$/FastAndrUtils.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/fastandrlibs/fastandrlibs.iml" filepath="$PROJECT_DIR$/fastandrlibs/fastandrlibs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fastandrutils/fastandrutils.iml" filepath="$PROJECT_DIR$/fastandrutils/fastandrutils.iml" />
     </modules>
   </component>
 </project>
